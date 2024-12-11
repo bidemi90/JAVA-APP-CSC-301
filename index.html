@@ -1,153 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CGPA Calculator</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f0f0f0;
-        }
-        h1 {
-            color: #333;
-        }
-     .download-button {
-            display: inline-block;
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            padding: 10px 24px;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-     .download-button:hover {
-            background-color: #45a049;
-        }
-     .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-     .instruction-section {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f0f0f0;
+      }
+      h1 {
+        color: #333;
+      }
+      .download-button {
+        display: inline-block;
+        background-color: #4caf50;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        padding: 10px 24px;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+      }
+      .download-button:hover {
+        background-color: #45a049;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .instruction-section {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1>CGPA Calculator Using Java</h1>
-        <p>CSC 301 JAVA PROJECT</p>
+      <h1>CGPA Calculator Using Java</h1>
+      <p>CSC 301 JAVA PROJECT</p>
 
-        <div class="instruction-section">
-            <h2>Group Members List</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>S/N</th>
-                        <th>NAME</th>
-                        <th>MATRIC NUMBER</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Sodiq Abdullahi Bidemi</td>
-                        <td>csc/2022/2006</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>ABUMU ABDUL-MUJEEB BAMIDELE</td>
-                        <td>CSC/2022/1122</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Rasheed Qudus Gbolahan</td>
-                        <td>Csc/2022/1115</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Abdulazeez Hibatullah Ajoke</td>
-                        <td>CSC/2022/1001</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>ADEYOYIN AYOMIKUN EMMANUEL</td>
-                        <td>Csc/2022/1017</td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>ADESINA FAWAZ ILEMERU</td>
-                        <td>CSC/2022/1011</td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>Owoicho Joy Onyejekun</td>
-                        <td>CSC/2023/2001</td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>Sulaiman Aminat Bolaji</td>
-                        <td>CSC/2022/1119</td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
-                        <td>Kolapo Abass Olagoke</td>
-                        <td>CSC/2022/1132</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="instruction-section">
-            <h2>How to Use the App</h2>
-            <p>Follow these steps to use the CGPA calculator:</p>
-            <ol>
-                <li>Enter the number of courses you want to calculate the CGPA for.</li>
-                <li>For each course, enter the course code, score (between 0 and 100), and weight unit.</li>
-                <li>Click the "Calculate CGPA" button to generate the results table.</li>
-                <li>The results table will display the course details, including the course code, score, grade, weight unit, grade point, and the calculated CGPA.</li>
-            </ol>
-        </div>
-        <div class="instruction-section">
-            <h2>Algorithm</h2>
-            <p>The algorithm for the CGPA calculation program follows these steps:</p>
-            <ol>
-                <li>Input the number of courses.</li>
-                <li>Initialize arrays for course codes, scores, grades, grade points, weight units, and weighted grade points.</li>
-                <li>Collect course codes, scores, grades, and weight units for each course.</li>
-                <li>Calculate weighted grade points and totals.</li>
-                <li>Calculate CGPA.</li>
-                <li>Prepare and display the results table.</li>
-            </ol>
-        </div>
-        <a href="./JAVAAPP.zip" download="csc301_cgpa_calculator.zip" class="download-button">Download Java APP</a>
+      <div class="instruction-section">
+        <h2>Group Members List</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>S/N</th>
+              <th>NAME</th>
+              <th>MATRIC NUMBER</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Sodiq Abdullahi Bidemi</td>
+              <td>csc/2022/2006</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>ABUMU ABDUL-MUJEEB BAMIDELE</td>
+              <td>CSC/2022/1122</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Rasheed Qudus Gbolahan</td>
+              <td>Csc/2022/1115</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Abdulazeez Hibatullah Ajoke</td>
+              <td>CSC/2022/1001</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>ADEYOYIN AYOMIKUN EMMANUEL</td>
+              <td>Csc/2022/1017</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>ADESINA FAWAZ ILEMERU</td>
+              <td>CSC/2022/1011</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Owoicho Joy Onyejekun</td>
+              <td>CSC/2023/2001</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Sulaiman Aminat Bolaji</td>
+              <td>CSC/2022/1119</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Kolapo Abass Olagoke</td>
+              <td>CSC/2022/1132</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>Balogun Mubarak Al-faruk</td>
+              <td>CSC/2021/1048</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="instruction-section">
+        <h2>How to Use the App</h2>
+        <p>Follow these steps to use the CGPA calculator:</p>
+        <ol>
+          <li>
+            Enter the number of courses you want to calculate the CGPA for.
+          </li>
+          <li>
+            For each course, enter the course code, score (between 0 and 100),
+            and weight unit.
+          </li>
+          <li>
+            Click the "Calculate CGPA" button to generate the results table.
+          </li>
+          <li>
+            The results table will display the course details, including the
+            course code, score, grade, weight unit, grade point, and the
+            calculated CGPA.
+          </li>
+        </ol>
+      </div>
+      <div class="instruction-section">
+        <h2>Algorithm</h2>
+        <p>
+          The algorithm for the CGPA calculation program follows these steps:
+        </p>
+        <ol>
+          <li>Input the number of courses.</li>
+          <li>
+            Initialize arrays for course codes, scores, grades, grade points,
+            weight units, and weighted grade points.
+          </li>
+          <li>
+            Collect course codes, scores, grades, and weight units for each
+            course.
+          </li>
+          <li>Calculate weighted grade points and totals.</li>
+          <li>Calculate CGPA.</li>
+          <li>Prepare and display the results table.</li>
+        </ol>
+      </div>
+      <a
+        href="./JAVAAPP.zip"
+        download="csc301_cgpa_calculator.zip"
+        class="download-button"
+        >Download Java APP</a
+      >
     </div>
-</body>
+  </body>
 </html>
